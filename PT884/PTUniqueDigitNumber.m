@@ -8,6 +8,8 @@
 
 #import "PTUniqueDigitNumber.h"
 
+static int occurrences[10] = {0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0};
+
 @interface PTUniqueDigitNumber ()
 
 - (BOOL)isUniqueDigit:(NSNumber *)number;
@@ -74,8 +76,18 @@
 {        
     int bufferSize      = 32;
     NSString *aString   = number.description;
-    int occurrences[10] = {0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0};
     
+    occurrences[0] = 0;
+    occurrences[1] = 0;
+    occurrences[2] = 0;
+    occurrences[3] = 0;
+    occurrences[4] = 0;
+    occurrences[5] = 0;
+    occurrences[6] = 0;
+    occurrences[7] = 0;
+    occurrences[8] = 0;
+    occurrences[9] = 0;
+
     NSRange range       = { 0, bufferSize };
     NSUInteger end      = [aString length];
     

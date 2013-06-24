@@ -21,20 +21,26 @@ int main(int argc, const char * argv[])
         number.startNumber = @(123456789);
         number.endNumber   = @(987654321);
         
+        NSNumber *aNumber = number.startNumber;
+        
         NSLog(@"searching");
         
-        for (NSNumber *uniq in number)
+        BOOL isSolution = NO;
+        
+        while ( ! isSolution)
         {
-            if (numberSolvesPT884(uniq))
-            {
-                NSLog(@"the answer is: %@" , uniq);
-                return 0;
-            }
-//            else
-//            {
-//                NSLog(@"not %@" , uniq);
-//            }
+            aNumber     = [number nextNumber];
+            isSolution  = numberSolvesPT884(aNumber);
         }
+        
+//        for (NSNumber *uniq in number)
+//        {
+//            if (numberSolvesPT884(uniq))
+//            {
+//                NSLog(@"the answer is: %@" , uniq);
+//                return 0;
+//            }
+//        }
         
         NSLog(@"didn't find anything.");
         
@@ -44,6 +50,22 @@ int main(int argc, const char * argv[])
 
 BOOL numberSolvesPT884(NSNumber *number)
 {
-    return NO;
+    NSString *substring;
+    int value;
+    
+    NSUInteger numberLength = number.description.length;
+    
+    for (int length = 1; length <= numberLength; length++)
+    {
+        substring = [number.description substringToIndex:length];
+        
+        value = substring.intValue;
+        if (value % length != 0)
+        {
+            return NO;
+        }
+    }
+    
+    return YES;
 }
 
