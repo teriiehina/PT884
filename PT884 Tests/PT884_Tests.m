@@ -48,4 +48,17 @@
     XCTAssertEqualObjects([self.number nextNumber], @(23), @"The next unique digit number after 21 shoul be 23");
 }
 
+- (void)testEnumerationFromOneToTen
+{
+    self.number.startNumber = @(1);
+    self.number.endNumber   = @(10);
+    
+    for (NSNumber *number in self.number)
+    {
+        NSLog(@"number: %@" , number);
+    }
+    
+    XCTAssertFalse(NO, @"rien à foutre");
+}
+
 @end

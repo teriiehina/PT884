@@ -26,20 +26,31 @@
     return self;
 }
 
-- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(__unsafe_unretained id [])buffer count:(NSUInteger)len
+- (void)setStartNumber:(NSNumber *)startNumber
 {
-    return 0;
+    _startNumber        = startNumber;
+    self.currentNumber  = startNumber;
+}
+
+- (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(__unsafe_unretained id [])buffer count:(NSUInteger)bufferSize
+{    
+    NSUInteger arrayIndex  = (NSUInteger)state->state;
+    NSUInteger bufferIndex = 0;
     
-    if (state->state >= 100)
+    while ( (bufferIndex < bufferSize) && (self.currentNumber.intValue <= self.endNumber.intValue))
     {
-        return 0;
+        self.currentNumber = [self nextNumber];
+        buffer[bufferIndex] = self.currentNumber;
+        arrayIndex++;
+        bufferIndex++;
     }
     
-//    self.currentNumber = [self nextNumber];
-//    
-//    state->itemsPtr = self.;
-//    state->state = ARRAY_LENGTH;
-//    state->mutationsPtr = (unsigned long *)self;
+    state->state        = (unsigned long)arrayIndex;
+    state->itemsPtr     = buffer;
+    state->mutationsPtr = &state->extra[0];
+    
+    return bufferIndex;
+
     
     return 1;
 }
@@ -60,19 +71,7 @@
 
 // TODO: find a more efficient way to do this computation
 - (BOOL)isUniqueDigit:(NSNumber *)number
-{
-//    NSString *string  = [NSString stringWithFormat:@"%d" , number.intValue];
-//    NSArray *dividers = @[@"1" , @"2" , @"3" , @"4" , @"5" , @"6" , @"7" , @"8" , @"9"];
-//    NSArray *comps;
-//
-//    for (NSString *divider in dividers)
-//    {
-//        comps = [string componentsSeparatedByString:@"1"];
-//        if (comps.count > 2) return NO;
-//    }
-//    
-//    return YES;
-    
+{        
     int bufferSize      = 32;
     NSString *aString   = number.description;
     int occurrences[10] = {0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0};
@@ -93,8 +92,9 @@
         for (unsigned i=0 ; i<range.length ; i++)
         {
             unichar c = buffer[i] - 48;
-            NSAssert(c > 0, @"we should not have negative index here");
-            NSAssert(c < 10, @"we should not have double-digits index here");
+
+            NSAssert(c >= 0, @"we should not have negative index here");
+            NSAssert(c <= 9, @"we should not have double-digits index here");
 
             occurrences[c]++;
         }

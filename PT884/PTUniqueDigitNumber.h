@@ -15,8 +15,11 @@
 
 @interface PTUniqueDigitNumber : NSObject <NSFastEnumeration>
 
+@property (nonatomic , strong) NSNumber *startNumber;
 @property (nonatomic , strong) NSNumber *currentNumber;
+@property (nonatomic , strong) NSNumber *endNumber;
 
 - (NSNumber *)nextNumber;
+
 
 @end
