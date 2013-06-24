@@ -31,6 +31,7 @@
 		D786980A17787CE9001D64E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D786980D17787CE9001D64E0 /* PT884-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PT884-Prefix.pch"; sourceTree = "<group>"; };
 		D786980E17787CE9001D64E0 /* PT884.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = PT884.1; sourceTree = "<group>"; };
+		D786981517787D9A001D64E0 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -48,6 +49,7 @@
 		D78697FB17787CE9001D64E0 = {
 			isa = PBXGroup;
 			children = (
+				D786981517787D9A001D64E0 /* README */,
 				D786980917787CE9001D64E0 /* PT884 */,
 				D786980617787CE9001D64E0 /* Frameworks */,
 				D786980517787CE9001D64E0 /* Products */,
@@ -253,6 +255,7 @@
 				D786981417787CE9001D64E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
