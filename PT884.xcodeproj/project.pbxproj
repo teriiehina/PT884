@@ -10,7 +10,22 @@
 		D786980817787CE9001D64E0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D786980717787CE9001D64E0 /* Foundation.framework */; };
 		D786980B17787CE9001D64E0 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D786980A17787CE9001D64E0 /* main.m */; };
 		D786980F17787CE9001D64E0 /* PT884.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = D786980E17787CE9001D64E0 /* PT884.1 */; };
+		D786981C17787DEB001D64E0 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D786981B17787DEB001D64E0 /* XCTest.framework */; };
+		D786982217787DEB001D64E0 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = D786982017787DEB001D64E0 /* InfoPlist.strings */; };
+		D786982417787DEB001D64E0 /* PT884_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = D786982317787DEB001D64E0 /* PT884_Tests.m */; };
+		D786982D17787E18001D64E0 /* PTUniqueDigitNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = D786982C17787E18001D64E0 /* PTUniqueDigitNumber.m */; };
+		D786982E17788040001D64E0 /* PTUniqueDigitNumber.m in Sources */ = {isa = PBXBuildFile; fileRef = D786982C17787E18001D64E0 /* PTUniqueDigitNumber.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D786982617787DEB001D64E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D78697FC17787CE9001D64E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D786980317787CE9001D64E0;
+			remoteInfo = PT884;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		D786980217787CE9001D64E0 /* CopyFiles */ = {
@@ -32,6 +47,14 @@
 		D786980D17787CE9001D64E0 /* PT884-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PT884-Prefix.pch"; sourceTree = "<group>"; };
 		D786980E17787CE9001D64E0 /* PT884.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = PT884.1; sourceTree = "<group>"; };
 		D786981517787D9A001D64E0 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
+		D786981A17787DEB001D64E0 /* PT884 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = "PT884 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		D786981B17787DEB001D64E0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
+		D786981F17787DEB001D64E0 /* PT884 Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PT884 Tests-Info.plist"; sourceTree = "<group>"; };
+		D786982117787DEB001D64E0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		D786982317787DEB001D64E0 /* PT884_Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PT884_Tests.m; sourceTree = "<group>"; };
+		D786982517787DEB001D64E0 /* PT884 Tests-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PT884 Tests-Prefix.pch"; sourceTree = "<group>"; };
+		D786982B17787E18001D64E0 /* PTUniqueDigitNumber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PTUniqueDigitNumber.h; sourceTree = "<group>"; };
+		D786982C17787E18001D64E0 /* PTUniqueDigitNumber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PTUniqueDigitNumber.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +66,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		D786981717787DEB001D64E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D786981C17787DEB001D64E0 /* XCTest.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -51,6 +82,7 @@
 			children = (
 				D786981517787D9A001D64E0 /* README */,
 				D786980917787CE9001D64E0 /* PT884 */,
+				D786981D17787DEB001D64E0 /* PT884 Tests */,
 				D786980617787CE9001D64E0 /* Frameworks */,
 				D786980517787CE9001D64E0 /* Products */,
 			);
@@ -60,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				D786980417787CE9001D64E0 /* PT884 */,
+				D786981A17787DEB001D64E0 /* PT884 Tests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -68,6 +101,7 @@
 			isa = PBXGroup;
 			children = (
 				D786980717787CE9001D64E0 /* Foundation.framework */,
+				D786981B17787DEB001D64E0 /* XCTest.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -78,6 +112,8 @@
 				D786980A17787CE9001D64E0 /* main.m */,
 				D786980E17787CE9001D64E0 /* PT884.1 */,
 				D786980C17787CE9001D64E0 /* Supporting Files */,
+				D786982B17787E18001D64E0 /* PTUniqueDigitNumber.h */,
+				D786982C17787E18001D64E0 /* PTUniqueDigitNumber.m */,
 			);
 			path = PT884;
 			sourceTree = "<group>";
@@ -86,6 +122,25 @@
 			isa = PBXGroup;
 			children = (
 				D786980D17787CE9001D64E0 /* PT884-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D786981D17787DEB001D64E0 /* PT884 Tests */ = {
+			isa = PBXGroup;
+			children = (
+				D786982317787DEB001D64E0 /* PT884_Tests.m */,
+				D786981E17787DEB001D64E0 /* Supporting Files */,
+			);
+			path = "PT884 Tests";
+			sourceTree = "<group>";
+		};
+		D786981E17787DEB001D64E0 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				D786981F17787DEB001D64E0 /* PT884 Tests-Info.plist */,
+				D786982017787DEB001D64E0 /* InfoPlist.strings */,
+				D786982517787DEB001D64E0 /* PT884 Tests-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -110,6 +165,24 @@
 			productReference = D786980417787CE9001D64E0 /* PT884 */;
 			productType = "com.apple.product-type.tool";
 		};
+		D786981917787DEB001D64E0 /* PT884 Tests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D786982817787DEB001D64E0 /* Build configuration list for PBXNativeTarget "PT884 Tests" */;
+			buildPhases = (
+				D786981617787DEB001D64E0 /* Sources */,
+				D786981717787DEB001D64E0 /* Frameworks */,
+				D786981817787DEB001D64E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D786982717787DEB001D64E0 /* PBXTargetDependency */,
+			);
+			name = "PT884 Tests";
+			productName = "PT884 Tests";
+			productReference = D786981A17787DEB001D64E0 /* PT884 Tests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -118,6 +191,11 @@
 			attributes = {
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "Peter MEUEL";
+				TargetAttributes = {
+					D786981917787DEB001D64E0 = {
+						TestTargetID = D786980317787CE9001D64E0;
+					};
+				};
 			};
 			buildConfigurationList = D78697FF17787CE9001D64E0 /* Build configuration list for PBXProject "PT884" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -132,9 +210,21 @@
 			projectRoot = "";
 			targets = (
 				D786980317787CE9001D64E0 /* PT884 */,
+				D786981917787DEB001D64E0 /* PT884 Tests */,
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D786981817787DEB001D64E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D786982217787DEB001D64E0 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		D786980017787CE9001D64E0 /* Sources */ = {
@@ -142,10 +232,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				D786980B17787CE9001D64E0 /* main.m in Sources */,
+				D786982D17787E18001D64E0 /* PTUniqueDigitNumber.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D786981617787DEB001D64E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D786982417787DEB001D64E0 /* PT884_Tests.m in Sources */,
+				D786982E17788040001D64E0 /* PTUniqueDigitNumber.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D786982717787DEB001D64E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D786980317787CE9001D64E0 /* PT884 */;
+			targetProxy = D786982617787DEB001D64E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D786982017787DEB001D64E0 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D786982117787DEB001D64E0 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
 		D786981017787CE9001D64E0 /* Debug */ = {
@@ -236,6 +355,42 @@
 			};
 			name = Release;
 		};
+		D786982917787DEB001D64E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PT884 Tests/PT884 Tests-Prefix.pch";
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = "PT884 Tests/PT884 Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Debug;
+		};
+		D786982A17787DEB001D64E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(DEVELOPER_FRAMEWORKS_DIR)",
+					"$(inherited)",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "PT884 Tests/PT884 Tests-Prefix.pch";
+				INFOPLIST_FILE = "PT884 Tests/PT884 Tests-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "";
+				WRAPPER_EXTENSION = xctest;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -256,6 +411,14 @@
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
+		};
+		D786982817787DEB001D64E0 /* Build configuration list for PBXNativeTarget "PT884 Tests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D786982917787DEB001D64E0 /* Debug */,
+				D786982A17787DEB001D64E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
 		};
 /* End XCConfigurationList section */
 	};
