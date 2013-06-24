@@ -17,6 +17,6 @@
 
 @property (nonatomic , strong) NSNumber *currentNumber;
 
-- (NSNumber *)nextNubmer;
+- (NSNumber *)nextNumber;
 
 @end

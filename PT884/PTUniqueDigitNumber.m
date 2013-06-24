@@ -29,9 +29,22 @@
 - (NSUInteger)countByEnumeratingWithState:(NSFastEnumerationState *)state objects:(__unsafe_unretained id [])buffer count:(NSUInteger)len
 {
     return 0;
+    
+    if (state->state >= 100)
+    {
+        return 0;
+    }
+    
+//    self.currentNumber = [self nextNumber];
+//    
+//    state->itemsPtr = self.;
+//    state->state = ARRAY_LENGTH;
+//    state->mutationsPtr = (unsigned long *)self;
+    
+    return 1;
 }
 
-- (NSNumber *)nextNubmer
+- (NSNumber *)nextNumber
 {
     int current = self.currentNumber.intValue;
     

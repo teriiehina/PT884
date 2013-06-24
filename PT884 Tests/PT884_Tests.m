@@ -30,23 +30,22 @@
     [super tearDown];
 }
 
-
 - (void)testUniqueDigitNumberFromOne
 {
     self.number.currentNumber = @(1);
-    XCTAssertEqualObjects([self.number nextNubmer], @(2), @"The next unique digit number after 1 shoul be 2");
+    XCTAssertEqualObjects([self.number nextNumber], @(2), @"The next unique digit number after 1 shoul be 2");
 }
 
 - (void)testUniqueDigitNumberFromEleven
 {
     self.number.currentNumber = @(10);
-    XCTAssertEqualObjects([self.number nextNubmer], @(12), @"The next unique digit number after 10 shoul be 12");
+    XCTAssertEqualObjects([self.number nextNumber], @(12), @"The next unique digit number after 10 shoul be 12");
 }
 
 - (void)testUniqueDigitNumberFromTwentyOne
 {
     self.number.currentNumber = @(21);
-    XCTAssertEqualObjects([self.number nextNubmer], @(23), @"The next unique digit number after 21 shoul be 23");
+    XCTAssertEqualObjects([self.number nextNumber], @(23), @"The next unique digit number after 21 shoul be 23");
 }
 
 @end
