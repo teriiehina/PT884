@@ -68,6 +68,8 @@ static int occurrences[10] = {0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0};
         isValid = [self isUniqueDigit:@(++current)];
     }
     
+    self.currentNumber = @(current);
+    
     return @(current);
 }
 

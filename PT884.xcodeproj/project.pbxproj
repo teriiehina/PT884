@@ -46,7 +46,6 @@
 		D786980A17787CE9001D64E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D786980D17787CE9001D64E0 /* PT884-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "PT884-Prefix.pch"; sourceTree = "<group>"; };
 		D786980E17787CE9001D64E0 /* PT884.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = PT884.1; sourceTree = "<group>"; };
-		D786981517787D9A001D64E0 /* README */ = {isa = PBXFileReference; lastKnownFileType = text; path = README; sourceTree = "<group>"; };
 		D786981A17787DEB001D64E0 /* PT884 Tests.xctest */ = {isa = PBXFileReference; explicitFileType = folder; includeInIndex = 0; path = "PT884 Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		D786981B17787DEB001D64E0 /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		D786981F17787DEB001D64E0 /* PT884 Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "PT884 Tests-Info.plist"; sourceTree = "<group>"; };
@@ -80,7 +79,6 @@
 		D78697FB17787CE9001D64E0 = {
 			isa = PBXGroup;
 			children = (
-				D786981517787D9A001D64E0 /* README */,
 				D786980917787CE9001D64E0 /* PT884 */,
 				D786981D17787DEB001D64E0 /* PT884 Tests */,
 				D786980617787CE9001D64E0 /* Frameworks */,
@@ -419,6 +417,7 @@
 				D786982A17787DEB001D64E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

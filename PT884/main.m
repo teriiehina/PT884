@@ -25,12 +25,22 @@ int main(int argc, const char * argv[])
         
         NSLog(@"searching");
         
-        BOOL isSolution = NO;
+        BOOL isSolution = numberSolvesPT884(aNumber);
         
         while ( ! isSolution)
         {
+//            NSLog(@"%@ is not a solution" , aNumber);
             aNumber     = [number nextNumber];
             isSolution  = numberSolvesPT884(aNumber);
+        }
+        
+        if (isSolution)
+        {
+            NSLog(@"the solution is %@" , aNumber);
+        }
+        else
+        {
+            NSLog(@"didn't find anything.");
         }
         
 //        for (NSNumber *uniq in number)
@@ -42,7 +52,6 @@ int main(int argc, const char * argv[])
 //            }
 //        }
         
-        NSLog(@"didn't find anything.");
         
     }
     return 0;
