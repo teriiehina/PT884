@@ -22,8 +22,8 @@ int main(int argc, const char * argv[])
         
         PTUniqueDigitNumber *number = [[PTUniqueDigitNumber alloc] init];
 
-        number.startNumber = @(123456789);
-        number.endNumber   = @(987654321);
+        number.startNumber = @(12345678);
+        number.endNumber   = @(98765432);
         
         NSNumber *aNumber = number.startNumber;
         
@@ -79,7 +79,7 @@ BOOL numberSolvesPT884_version2(NSNumber *number)
     for (int length = 1; length <= numberLength; length++)
     {        
         value = beginnigOfStringAsInt(string , length);
-        NSLog(@"%@ -> %d , %d = %d" , number , value , length , value % length);
+//        NSLog(@"%@ -> %d , %d = %d" , number , value , length , value % length);
         if (value % length != 0)
         {
             return NO;

@@ -42,6 +42,8 @@
 
 /* Begin PBXFileReference section */
 		D785BEDE1779782200BAAB27 /* 2013-06-25_09.02.32.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "2013-06-25_09.02.32.png"; sourceTree = "<group>"; };
+		D785BEDF17797D1400BAAB27 /* length_8_version_1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = length_8_version_1.png; sourceTree = "<group>"; };
+		D785BEE017797D1400BAAB27 /* length_8_version_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = length_8_version_2.png; sourceTree = "<group>"; };
 		D786980417787CE9001D64E0 /* PT884 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = PT884; sourceTree = BUILT_PRODUCTS_DIR; };
 		D786980717787CE9001D64E0 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		D786980A17787CE9001D64E0 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -81,6 +83,8 @@
 			isa = PBXGroup;
 			children = (
 				D785BEDE1779782200BAAB27 /* 2013-06-25_09.02.32.png */,
+				D785BEDF17797D1400BAAB27 /* length_8_version_1.png */,
+				D785BEE017797D1400BAAB27 /* length_8_version_2.png */,
 			);
 			path = Results;
 			sourceTree = "<group>";
