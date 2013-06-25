@@ -96,13 +96,15 @@ static int occurrences[10] = {0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0 , 0};
     while (range.location < end)
     {
         unichar buffer[bufferSize];
+        
         if (range.location + range.length > end)
         {
             range.length = end - range.location;
         }
         
-        [aString getCharacters: buffer range: range];
+        [aString getCharacters:buffer range:range];
         range.location += bufferSize;
+        
         for (unsigned i=0 ; i<range.length ; i++)
         {
             unichar c = buffer[i] - 48;

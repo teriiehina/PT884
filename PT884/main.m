@@ -10,7 +10,11 @@
 
 #import "PTUniqueDigitNumber.h"
 
-BOOL numberSolvesPT884(NSNumber *number);
+BOOL numberSolvesPT884_version1(NSNumber *number);
+BOOL numberSolvesPT884_version2(NSNumber *number);
+
+int beginnigOfStringAsInt(NSString *string , int toIndex);
+int unicharAsIntValue(unichar c);
 
 int main(int argc, const char * argv[])
 {
@@ -25,13 +29,12 @@ int main(int argc, const char * argv[])
         
         NSLog(@"searching");
         
-        BOOL isSolution = numberSolvesPT884(aNumber);
+        BOOL isSolution = numberSolvesPT884_version2(aNumber);
         
         while ( ! isSolution)
         {
-//            NSLog(@"%@ is not a solution" , aNumber);
             aNumber     = [number nextNumber];
-            isSolution  = numberSolvesPT884(aNumber);
+            isSolution  = numberSolvesPT884_version2(aNumber);
         }
         
         if (isSolution)
@@ -42,26 +45,15 @@ int main(int argc, const char * argv[])
         {
             NSLog(@"didn't find anything.");
         }
-        
-//        for (NSNumber *uniq in number)
-//        {
-//            if (numberSolvesPT884(uniq))
-//            {
-//                NSLog(@"the answer is: %@" , uniq);
-//                return 0;
-//            }
-//        }
-        
-        
     }
+    
     return 0;
 }
 
-BOOL numberSolvesPT884(NSNumber *number)
+BOOL numberSolvesPT884_version1(NSNumber *number)
 {
-    NSString *substring;
     int value;
-    
+    NSString *substring;
     NSUInteger numberLength = number.description.length;
     
     for (int length = 1; length <= numberLength; length++)
@@ -76,5 +68,45 @@ BOOL numberSolvesPT884(NSNumber *number)
     }
     
     return YES;
+}
+
+BOOL numberSolvesPT884_version2(NSNumber *number)
+{
+    int value;
+    NSString *string        = number.description;
+    NSUInteger numberLength = number.description.length;
+    
+    for (int length = 1; length <= numberLength; length++)
+    {        
+        value = beginnigOfStringAsInt(string , length);
+        NSLog(@"%@ -> %d , %d = %d" , number , value , length , value % length);
+        if (value % length != 0)
+        {
+            return NO;
+        }
+    }
+    
+    return YES;
+}
+
+int beginnigOfStringAsInt(NSString *string , int toIndex)
+{
+    int value = 0;
+    unichar c;
+    
+    for (int index = 0; index < toIndex; index++)
+    {
+        c = [string characterAtIndex:index];
+        c = unicharAsIntValue(c);
+        
+        value += c * pow(10, toIndex - index - 1);
+    }
+    
+    return value;
+}
+
+int unicharAsIntValue(unichar c)
+{
+    return c-48;
 }
 
